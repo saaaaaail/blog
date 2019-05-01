@@ -48,7 +48,12 @@ mybatis:
   configuration:
     cache-enabled: true
     map-underscore-to-camel-case: true
-
+# mapper
+mapper:
+  mappers:
+    - com.sail.blog.base.BaseMapper
+  not-empty: false
+  identity: MYSQL
 
 
 # 分页配置

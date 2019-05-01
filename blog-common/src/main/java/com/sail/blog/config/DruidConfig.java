@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 public class DruidConfig {
 
     @Autowired
-    private DruidDataSourceDto druidDataSource;
+    private DruidDataSourceDTO druidDataSource;
 
     @Autowired
     private WallFilter wallFilter;

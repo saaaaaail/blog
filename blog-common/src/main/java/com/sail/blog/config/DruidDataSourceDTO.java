@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Data
 @ConfigurationProperties(prefix = "spring.datasource")
-public class DruidDataSourceDto {
+public class DruidDataSourceDTO {
     private String url;
     private String username;
     private String password;
