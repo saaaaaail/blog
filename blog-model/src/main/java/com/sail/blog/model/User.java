@@ -6,6 +6,7 @@ import lombok.extern.apachecommons.CommonsLog;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * @program: User
@@ -22,6 +23,8 @@ public class User {
     @Column(name = "id")
     private Long id;
 
+    private String nickName;
+
     private String userName;
 
     private String userPass;
@@ -32,5 +35,12 @@ public class User {
 
     private String mail;
 
-
+    /**
+     * 注册时间
+     */
+    private Date createTime;
+    /**
+     * 用户组
+     */
+    private String groupName;
 }
