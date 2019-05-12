@@ -43,15 +43,15 @@ public class ResponseDataDTO<T> implements Serializable {
     }
 
     public static ResponseDataDTO success(){
-        return new ResponseDataDTO(1,"成功","",200,null);
+        return new ResponseDataDTO<>(1,"成功","",200,null);
     }
 
     public static<T> ResponseDataDTO<T> success(T data){
-        return new ResponseDataDTO(1,"成功","",200,data);
+        return new ResponseDataDTO<>(1,"成功","",200,data);
     }
 
     public static<T> ResponseDataDTO<T> success(String redirectUrl,T t) {
-        return new ResponseDataDTO(1,"成功",redirectUrl,200,t);
+        return new ResponseDataDTO<>(1,"成功",redirectUrl,200,t);
     }
 
     public static<T> ResponseDataDTO<T> success(Integer code,T t) {
@@ -59,15 +59,15 @@ public class ResponseDataDTO<T> implements Serializable {
     }
 
     public static ResponseDataDTO error() {
-        return new ResponseDataDTO(0,"error","",500,null);
+        return new ResponseDataDTO<>(0,"error","",500,null);
     }
 
     public static ResponseDataDTO error(String message) {
-        return new ResponseDataDTO(0,message,"",500,null);
+        return new ResponseDataDTO<>(0,message,"",500,null);
     }
 
     public static ResponseDataDTO error(Integer code) {
-        return new ResponseDataDTO(0,"error","",code,null);
+        return new ResponseDataDTO<>(0,"error","",code,null);
     }
 
     public static<T> ResponseDataDTO<T> error(String message,Integer code) {
