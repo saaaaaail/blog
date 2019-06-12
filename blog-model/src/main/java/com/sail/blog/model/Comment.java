@@ -1,5 +1,6 @@
 package com.sail.blog.model;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import java.util.Date;
 
 @Data
 @Table(name = "comment")
+@ApiModel(value = "Comment",description = "评论")
 public class Comment {
 
     @Id
