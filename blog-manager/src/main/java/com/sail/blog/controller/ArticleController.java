@@ -30,7 +30,7 @@ public class ArticleController  {
     ArticleService articleService;
 
     @ResponseBody
-    @RequestMapping(value = "/getArticles",method = RequestMethod.POST)
+    @RequestMapping(value = "/articles",method = RequestMethod.POST)
     public ResponseDataDTO<PageInfo<Article>> getLatestArticle(@RequestParam("pageIndex") Integer pageIndex,
                                                                @RequestParam("pageSize") Integer pageSize,
                                                                @RequestParam("type") String type){

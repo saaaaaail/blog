@@ -49,24 +49,24 @@ public class Article {
      * 是否置顶
      */
     @ApiModelProperty(value = "置顶", name =  "top")
-    private Boolean top;
+    private Integer top;
     /**
-     * 类型
+     * 实体类型 ARTICLE 0
      */
-    @ApiModelProperty(value = "文章类型", name ="type" )
-    private String type;
+    @ApiModelProperty(value = "实体类型", name ="type" )
+    private Integer type;
     /**
-     * 文章状态/草稿/发布
+     * 文章状态/草稿/发布 0,1,2
      */
     @ApiModelProperty(value = "文章状态", name = "status")
-    private String status;
+    private Integer status;
 
-    private Boolean recommended;
+    private Integer isRecommended;
     /**
      * 文章目录所属
      */
     @ApiModelProperty(value = "文章目录", name = "category")
-    private Boolean category;
+    private String category;
     /**
      * 文章描述
      */
@@ -81,7 +81,7 @@ public class Article {
      * 是否允许评论
      */
     @ApiModelProperty(value = "是否开启评论", name = "comment")
-    private Boolean comment;
+    private Integer isComment;
     /**
      * 浏览量
      */
@@ -104,4 +104,12 @@ public class Article {
      */
     @ApiModelProperty(value = "文章更新时间", name = "updateTime")
     private Date updateTime;
+
+    private String createName;
+
+    private String updateName;
+
+    private Integer isDeleted;
+
+    private Integer isOnline;
 }
